@@ -22,6 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name=".SecondActivity"
+            android:theme="@style/Theme.GLABS14BPAREJA202402"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <!-- Simple Widget Receiver (Step 1) -->
         <receiver android:name=".SimpleWidget"
@@ -33,6 +43,18 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/simple_widget_info" />
+        </receiver>
+
+        <!-- Advanced Widget Receiver (Step 2) -->
+        <receiver android:name=".AdvancedWidget"
+            android:label="Advanced Widget (Paso 2)"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/advanced_widget_info" />
         </receiver>
 
     </application>
